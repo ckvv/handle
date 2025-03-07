@@ -34,6 +34,7 @@
     "@types/node": "^22",
     "@types/pinyin": "^2.10.0",
     "@types/seedrandom": "^3.0.2",
+    "@unocss/preset-wind3": "^66.1.0-beta.3",
     "@unocss/reset": "^66.1.0-beta.3",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/test-utils": "^2.2.6",

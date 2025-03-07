@@ -3,4 +3,3 @@ export function filterNonChineseChars(input: string) {
     .filter(i => /\p{Unified_Ideograph}/u.test(i))
     .join('')
 }
-
