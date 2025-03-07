@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import fs from 'fs'
-import c from 'ansis'
+import fs from 'node:fs'
 import { toZhuyin } from '@hankit/tools'
+import c from 'ansis'
 import _polyphones from '../src/data/polyphones.json'
 import { normalizePinyin } from './utils'
 import { getWordInfoFromZDict } from './zdict'
@@ -24,7 +24,7 @@ async function getPinyinWeb(word: string) {
 function validPinyin(word: string, pinyin: string) {
   if (!pinyin.match(/^[a-z0-9 ]+$/))
     return console.log(c.red(`[${word}] invalid char`), c.yellow(pinyin))
-  if (!pinyin.match(/[0-9]/))
+  if (!pinyin.match(/\d/))
     return console.log(c.red(`[${word}] invalid tone`), c.magenta(pinyin))
   const parts = pinyin.split(/\s+/g)
   if (parts.length !== 4)

@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { t } from '~/i18n'
 import { showFailed } from '~/state'
 import { meta } from '~/storage'
-import { t } from '~/i18n'
 
 function revealAnswer() {
   showFailed.value = false

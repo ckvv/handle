@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "esnext",
+    "incremental": false,
     "target": "esnext",
     "lib": ["DOM", "ESNext"],
-    "strict": true,
-    "esModuleInterop": true,
-    "incremental": false,
-    "skipLibCheck": true,
+    "baseUrl": ".",
+    "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "~/*": ["src/*"],
+      "@hankit/tools": ["packages/tools/src/index.ts"]
+    },
     "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
       "vitest/importMeta"
     ],
-    "paths": {
-      "~/*": ["src/*"],
-      "@hankit/tools": ["packages/tools/src/index.ts"]
-    }
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "exclude": ["dist", "node_modules"]
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { colorblind, inputMode, meta, spMode, useCheckAssist, useNoHint, useNumberTone as useNumberToneRaw, useStrictMode } from '~/storage'
-import { useNumberTone } from '~/state'
 import { locale, t } from '~/i18n'
+import { useNumberTone } from '~/state'
+import { colorblind, inputMode, meta, spMode, useCheckAssist, useNoHint, useNumberTone as useNumberToneRaw, useStrictMode } from '~/storage'
 
 defineProps<{
   lite?: boolean

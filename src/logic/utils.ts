@@ -1,7 +1,7 @@
-import seedrandom from 'seedrandom'
 import type { SpMode } from '@hankit/tools'
-import { pinyinInitials, toShuangpin, toSimplified, toZhuyin } from '@hankit/tools'
 import type { InputMode, MatchResult, ParsedChar } from './types'
+import { pinyinInitials, toShuangpin, toSimplified, toZhuyin } from '@hankit/tools'
+import seedrandom from 'seedrandom'
 import { getPinyin } from './idioms'
 
 export function parsePinyin(pinyin: string, mode: InputMode = 'py', spMode: SpMode = 'sougou') {
@@ -27,7 +27,7 @@ export function parsePinyin(pinyin: string, mode: InputMode = 'py', spMode: SpMo
 export function parseChar(char: string, pinyin?: string, mode?: InputMode, spMode?: SpMode): ParsedChar {
   if (!pinyin)
     pinyin = getPinyin(char)[0]
-  const tone = pinyin.match(/[\d]$/)?.[0] || ''
+  const tone = pinyin.match(/\d$/)?.[0] || ''
   if (tone)
     pinyin = pinyin.slice(0, -tone.length).trim()
 
@@ -145,10 +145,10 @@ export function numberToHanzi(number: number) {
 }
 
 /**
-* Checks whether a given date is in daylight saving time.
-* @param date the date object to be checked.
-* @returns true if the date is in daylight saving time, false if it's not.
-*/
+ * Checks whether a given date is in daylight saving time.
+ * @param date the date object to be checked.
+ * @returns true if the date is in daylight saving time, false if it's not.
+ */
 export function isDstObserved(date: Date) {
   const jan = new Date(date.getFullYear(), 0, 1)
   const jul = new Date(date.getFullYear(), 6, 1)

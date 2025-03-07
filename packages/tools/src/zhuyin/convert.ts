@@ -1,8 +1,8 @@
-import { parsePinyin } from '../pinyin'
-import zhuyinMap from '../map/zhuyin.json'
-import toneSymbols from '../map/toneSymbols.json'
-import { reverseMap } from '../utils'
 import type { ParsedPinyin } from '../types'
+import toneSymbols from '../map/toneSymbols.json'
+import zhuyinMap from '../map/zhuyin.json'
+import { parsePinyin } from '../pinyin'
+import { reverseMap } from '../utils'
 
 export function toZhuyin(pinyin: string | ParsedPinyin, renderTone = true) {
   pinyin = parsePinyin(pinyin)

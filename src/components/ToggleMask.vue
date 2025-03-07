@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useMask } from '~/state'
 import { t } from '~/i18n'
+import { useMask } from '~/state'
 
 defineProps<{
   hint?: boolean

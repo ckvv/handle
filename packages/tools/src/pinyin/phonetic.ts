@@ -7,7 +7,7 @@ export function getPhoneticPosition(pinyin: string | ParsedPinyin) {
   if (pinyin.phoneticPos == null) {
     const base = pinyin.base
     pinyin.phoneticPos = [
-      base.lastIndexOf('iu') > -1 ? base.lastIndexOf('iu') + 1 : -1,
+      base.includes('iu') ? base.lastIndexOf('iu') + 1 : -1,
       base.lastIndexOf('a'),
       base.lastIndexOf('e'),
       base.lastIndexOf('o'),

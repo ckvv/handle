@@ -1,7 +1,7 @@
-import toPhonetics from '../map/toPhonetics.json'
 import type { ParsedPinyin } from '../types'
-import { getPhoneticPosition } from './phonetic'
+import toPhonetics from '../map/toPhonetics.json'
 import { parsePinyin } from './parse'
+import { getPhoneticPosition } from './phonetic'
 
 export function pinyinToNumberStyle(pinyin: string | ParsedPinyin) {
   pinyin = parsePinyin(pinyin)

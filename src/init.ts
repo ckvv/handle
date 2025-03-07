@@ -1,9 +1,8 @@
-import { initialized, markEnd, markStart, meta, pauseTimer } from './storage'
-import { answer, dayNo, daySince, isDev, isFinished, isPassed, showCheatSheet, showHelp } from './state'
 import { t } from './i18n'
-import { answers } from './answers/list'
-import { START_DATE } from './logic/constants'
 import { tryFixAnswer } from './logic/answer-fix'
+import { START_DATE } from './logic/constants'
+import { answer, dayNo, daySince, isDev, isFinished, isPassed, showCheatSheet, showHelp } from './state'
+import { initialized, markEnd, markStart, meta, pauseTimer } from './storage'
 
 useTitle(computed(() => `${t('name')} - ${t('description')}`))
 

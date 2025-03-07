@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { formatDuration, meta } from '~/storage'
 import { t } from '~/i18n'
 import { dayNoHanzi } from '~/state'
+import { formatDuration, meta } from '~/storage'
 
 defineProps<{
   day?: boolean

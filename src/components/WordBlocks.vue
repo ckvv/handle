@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { parseWord, parsedAnswer, testAnswer, answer as todayAnswer } from '~/state'
 import { WORD_LENGTH } from '~/logic'
+import { parsedAnswer, parseWord, testAnswer, answer as todayAnswer } from '~/state'
 
 const props = withDefaults(
   defineProps<{
@@ -9,7 +9,8 @@ const props = withDefaults(
     answer?: string
     animate?: boolean
     active?: boolean
-  }>(), {
+  }>(),
+  {
     animate: true,
   },
 )

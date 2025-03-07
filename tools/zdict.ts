@@ -1,5 +1,5 @@
-import { fetch } from 'ohmyfetch'
 import { load } from 'cheerio'
+import { fetch } from 'ofetch'
 
 export async function getWordInfoFromZDict(word: string) {
   const r = await fetch(`https://www.zdic.net/hans/${word}`)

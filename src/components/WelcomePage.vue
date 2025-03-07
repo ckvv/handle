@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { t } from '~/i18n'
 import { isDark, showHelp, showVariants, useMask } from '~/state'
 import { initialized, inputMode } from '~/storage'
-import { t } from '~/i18n'
 
 function start() {
   showHelp.value = false

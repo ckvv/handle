@@ -14,7 +14,9 @@ export function seedShuffle<T>(array: T[], seed = RANDOM_SEED): T[] {
 
     // And swap it with the current element.
     [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]]
+      array[randomIndex],
+      array[currentIndex],
+    ]
   }
 
   return array

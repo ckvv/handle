@@ -1,7 +1,7 @@
 import type { ParsedPinyin } from '../types'
+import type { SpMode } from './constants'
 import { parsePinyin } from '../pinyin'
 import { pinyinInitials } from '../pinyin/constants'
-import type { SpMode } from './constants'
 import { getShuangpinMaps } from './constants'
 
 export function toShuangpin(pinyin: string | ParsedPinyin, spMode: SpMode) {

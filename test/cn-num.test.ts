@@ -1,7 +1,7 @@
-import { expect, test } from 'vitest'
+import { expect } from 'vitest'
 import { numberToHanzi } from '~/logic/utils'
 
-test('numberToHanzi', () => {
+it('numberToHanzi', () => {
   expect(numberToHanzi(0)).toMatchInlineSnapshot('"零"')
   expect(numberToHanzi(10)).toMatchInlineSnapshot('"十"')
   expect(numberToHanzi(18)).toMatchInlineSnapshot('"十八"')
