@@ -65,11 +65,11 @@ if (isDev || import.meta.hot) {
   console.log(`D${dayNo.value}`, theDate.toLocaleDateString(), answer.value.word, answer.value.hint)
 }
 
-if (import.meta.hot) {
-  // eslint-disable-next-line no-console
-  console.log(`${answers.length} days prepared`)
-  // eslint-disable-next-line no-console
-  console.log(`${answers.length - dayNo.value} days left`)
-  if ((answers.length - daySince.value) < 10)
-    throw new Error('Not enough days left!')
-}
+// if (import.meta.hot) {
+//   // eslint-disable-next-line no-console
+//   console.log(`${answers.length} days prepared`)
+//   // eslint-disable-next-line no-console
+//   console.log(`${answers.length - dayNo.value} days left`)
+//   if ((answers.length - daySince.value) < 10)
+//     throw new Error('Not enough days left!')
+// }
