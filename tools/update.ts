@@ -32,7 +32,6 @@ function validPinyin(word: string, pinyin: string) {
     const match = i.match(/^([a-z]+)([0-4])?$/)
     if (!match)
       return console.error(c.red(`[${word}] invalid pinyin [${idx}]:`), c.blue(i), '->', c.green(await getPinyinWeb(word[idx])))
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_full, body, _tone] = match
     if (!toZhuyin(body))
       console.error(c.red(`[${word}] invalid pinyin [${idx}]:`), c.blue(i), '->', c.green(await getPinyinWeb(word[idx])))

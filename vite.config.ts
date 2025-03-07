@@ -15,9 +15,6 @@ export default defineConfig({
       '@hankit/tools': path.resolve(__dirname, 'packages/tools/src/index.ts'),
     },
   },
-  define: {
-    'import.meta.vitest': 'false',
-  },
   plugins: process.env.TEST
     ? []
     : [
