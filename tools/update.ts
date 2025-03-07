@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import { toZhuyin } from '@hankit/tools'
 import c from 'ansis'
+import pinyin from 'pinyin'
 import _polyphones from '../src/data/polyphones.json'
 import { normalizePinyin } from './utils'
 import { getWordInfoFromZDict } from './zdict'
@@ -16,8 +17,6 @@ const unknown = new Set(
 )
 
 async function getPinyinWeb(word: string) {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const pinyin = require('pinyin/lib/web-pinyin.js') as typeof import('pinyin')
   return pinyin(word, { style: pinyin.STYLE_TONE2 }).map((i: any) => i[0]).join(' ')
 }
 
@@ -34,7 +33,7 @@ function validPinyin(word: string, pinyin: string) {
     if (!match)
       return console.error(c.red(`[${word}] invalid pinyin [${idx}]:`), c.blue(i), '->', c.green(await getPinyinWeb(word[idx])))
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [full, body, tone] = match
+    const [_full, body, _tone] = match
     if (!toZhuyin(body))
       console.error(c.red(`[${word}] invalid pinyin [${idx}]:`), c.blue(i), '->', c.green(await getPinyinWeb(word[idx])))
   //   if (!tone)
